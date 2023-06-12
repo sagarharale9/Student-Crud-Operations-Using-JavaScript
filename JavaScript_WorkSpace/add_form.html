@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Project</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="bundle.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- <script src="jQuery.js"></script> -->
+    <style>
+        #logout{
+            cursor: pointer;
+        }
+        #datas{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        #mHead{
+            color: rgb(235, 15, 15);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+        }
+        #delete-modal {
+            padding: 10px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            background-color: rgb(213, 229, 230);
+            border-radius: 5px;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+
+        .btn-lg {
+            padding-top: 20px;
+            padding-left: 10px;
+        }
+
+        #menus {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: red;
+            font-size: x-large;
+        }
+
+        #addbtn {
+
+            height: 80px;
+            width: 90px;
+            float: right;
+        }
+
+        #btn {
+            text-align: center;
+        }
+
+        #sidebar {
+            background-color: lightgrey;
+        }
+
+        #heading {
+            text-align: center;
+            color: skyblue;
+        }
+
+        @media screen and (max-width: 767px) {
+            #ross.content {
+                height: auto;
+            }
+        }
+
+
+
+
+ 
+    </style>
+
+</head>
+
+<body>
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <h2 >PRACTICE PROJECT</h2>
+        <div class="form-inline">
+            <img id="logout" src="logout.png" width="30px" height="30px" alt="edf">
+            <img id="logout" src="logo.png" width="40px" height="40px" alt="edf">
+        </div>
+    </nav>
+
+    <!-- SIDE BAR -->
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 " id="sidebar">
+                <div
+                    class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white  min-vh-100">
+                    <a href=""
+                        class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white  text-decoration-none">
+                        <span id="menus"><u> Menu</u></span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center  align-items-sm-start"
+                        id="menu">
+                        <li>
+                            <a href="" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Add
+                                    Student</span> </a>
+                        </li>
+                        <li>
+                            <a href="#list" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-speedometer2"></i> <span id="list" class="ms-1 d-none d-sm-inline">List</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-speedometer2"></i> <span
+                                    class="ms-1 d-none d-sm-inline">Reports</span> </a>
+                        </li>
+                    </ul>
+                    <hr>
+                </div>
+            </div>
+            <div class="col py-3">
+                <!-- STUDENT FORM -->
+                <div class="col-sm-10" id="form">
+                    <div class="" id="rowss">
+                        <h3 id="heading">STUDENT INFORMATION</h3>
+                        <hr>
+                        <div class="form-row">
+                            <div class="form-group col-md-5">
+                                <h5><label for="inputEmail4">Name</label></h5>
+                                <input type="email" class="form-control" id="name" placeholder="Enter Name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <h5> <label for="inputEmail4">Gender</label></h5>
+                                <input type="radio" name="gender" id="gender1" value="Male">
+                                <label for="flexRadioDefault1"> Male </label>
+                                <input type="radio" name="gender" id="gender2" value="Female">
+                                <label for="flexRadioDefault1"> Female </label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-5">
+                                <h5> <label for="inputCity">Hobbies</label></h5>
+                                <input type="text" class="form-control" id="hobby" placeholder="Enter Hobbies">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <h5> <label for="inputState">Course</label></h5>
+                                <select id="course" class="form-control">
+                                    <option value="">Choose....</option>
+                                    <option value="B.Tech">B.Tech</option>
+                                    <option value="B.Com">B.Com</option>
+                                    <option value="B.A">B.A</option>
+                                    <option value="BCA">BCA</option>
+                                </select>
+                                <div class="btn-lg col-md-12 ">
+                                    <button type="button" id="btn2" class="btn btn-danger  ">Cancel</button>
+                                    <button type="button" id="btn1" class="btn btn-primary  ">Update</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <!-- <div class="form-group col-md-12">
+                                <h5> <label for="inputState">Comments</label></h5>
+                                <textarea name="comments" id="comment" cols="70" rows="5"
+                                    placeholder="Comments"></textarea>
+                            </div> -->
+                            <!-- <div class="form-group col-md-10" id="btn">
+                                <button type="button" id="btn2" class="btn btn-warning  ">Cancel</button>
+                                <button type="button" onclick="json()" id="btn1"
+                                    class="btn btn-success  ">Update</button>
+                            </div> -->
+                        </div>
+
+                    </div>
+                </div>
+                <div class="clm col-md-10">
+                    <img id="addbtn" class="btn  btn-lg   float-right"
+                        src="add.jpg"
+                        alt="add">
+                </div>
+
+                <!-- <div id="table-modal" class="modal">
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <table class="table col-md-11" id="table">
+                        Table HTML code goes here 
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Sl.No</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">Course</th>
+                                <th scope="col">Hobbies</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div> -->
+
+                <table class="table col-md-11" id="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Sl.No</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Course</th>
+                            <th scope="col">Hobbies</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <!-- Delete Model -->
+                <div id="delete-modal" style="display:none;">
+                    <p id="mHead">Are you sure you want to delete this Data?</p>
+                    <p id="datas">Name: <span id="modal-name"></span></p>
+                    <p id="datas">Gender: <span id="modal-gender"></span></p>
+                    <p id="datas">Course: <span id="modal-course"></span></p>
+                    <p id="datas">Hobbies: <span id="modal-hobbies"></span></p>
+                    <button id="confirm-delete" class="btn btn-danger" >Delete</button>
+                    <button id="cancel-delete" class="btn btn-primary" >Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="jQuery2.js"></script>
+
+</body>
